@@ -48,6 +48,13 @@ function AuthPage() {
                 placeholder="Password"
                 className={animateFields ? 'slide-in' : ''}
               />
+              {isSignIn && (
+          <input
+            type="re-enter-password"
+            placeholder="re-enter-password"
+            className={animateFields ? 'slide-in' : ''}
+          />
+        )}
               <button type="submit">{isSignIn ? 'Sign Up' : 'Sign In'}</button>
             </form>
             <button className="toggle-button" onClick={toggleForm}>

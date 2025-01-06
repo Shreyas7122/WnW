@@ -35,6 +35,13 @@ const FormContainer = ({ isSignIn, onSubmit, toggleForm }) => {
           placeholder="Password"
           className={animate ? 'slide-in' : ''}
         />
+        {isSignIn && (
+          <input
+            type="re-enter-password"
+            placeholder="re-enter-password"
+            className={animate ? 'slide-in' : ''}
+          />
+        )}
         <button type="submit">{isSignIn ? 'Sign Up' : 'Sign In'}</button>
       </form>
       <button className="toggle-button" onClick={handleToggle}>
