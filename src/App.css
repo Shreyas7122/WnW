@@ -49,7 +49,7 @@ body {
 .truck-image {
   max-width: 40%;
   height: auto;
-  animation: moveTruck 2s ease-out;
+  animation: moveTruck 1s ease-out;
 }
 
 @keyframes moveTruck {
@@ -117,6 +117,7 @@ body {
   cursor: pointer;
   margin-top: 15px;
   font-size: 14px;
+  
   text-decoration: underline;
 }
 
@@ -136,11 +137,7 @@ body {
   font-size: 16px;
 }
 
-/* Form Animation */
-.animated-form {
-  animation: slideInFromLeft 1s ease-out;
-}
-
+/* Keyframe animation for sliding in from the left */
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -150,4 +147,9 @@ body {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+/* Add this class to form elements to trigger the animation */
+.slide-in {
+  animation: slideInFromLeft 0.5s ease-out forwards;
 }
